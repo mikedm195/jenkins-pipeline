@@ -4,7 +4,7 @@ pipeline {
         stage('Lint HTML') {
             steps {
                 sh 'echo "Running linter for all html files"'
-                tidy -q -e *.html
+                sh 'tidy -q -e *.html'
             }
         }
         stage('Upload to AWS') {
